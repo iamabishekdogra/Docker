@@ -13,5 +13,5 @@ RUN apt-get update && apt-get install -y python3 python3-pip
 EXPOSE 8000
 #use expose to inform docker that the container will listen on the specfic port at run time
 
-CMD ["python", "app.py"]
+CMD ["python3", "app.py"]
 #use CMD to specify the command that should run when the container start
