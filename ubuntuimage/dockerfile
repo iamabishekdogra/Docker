@@ -1,0 +1,17 @@
+FROM ubuntu:20.04
+#this uses the official ubuntu 20:04 image as the base
+
+WORKDIR /app
+#this define the working directory inside the container
+
+COPY . /app
+#this copies everything from the current directory on your machine into machine into /app inside the container
+
+RUN apt-get update && apt-get install -y python3 python3-pip
+#this update the package list and install python3 and pip
+
+EXPOSE 8000
+#use expose to inform docker that the container will listen on the specfic port at run time
+
+CMD ["python", "app.py"]
+#use CMD to specify the command that should run when the container start
