@@ -1,0 +1,8 @@
+FROM python
+
+WORKDIR /myapp
+
+COPY ./newapp.py .
+COPY ./server.txt .
+
+CMD [ "python", "newapp.py" ]
